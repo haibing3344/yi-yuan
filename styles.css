@@ -1,0 +1,310 @@
+/* Custom styles for 一元机场 - 商务蓝色风格 */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 商务蓝色配色方案 */
+:root {
+    --primary-blue: #1e40af;
+    --secondary-blue: #3b82f6;
+    --light-blue: #60a5fa;
+    --dark-blue: #1e3a8a;
+    --accent-blue: #2563eb;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effects */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* 商务蓝色渐变背景 */
+.gradient-bg {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+}
+
+/* Hero section 商务风格 */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    position: relative;
+}
+
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+    opacity: 0.3;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+/* Card hover effects - 商务风格 */
+.pricing-card {
+    transition: all 0.3s ease;
+    border: 2px solid var(--gray-200);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(30, 64, 175, 0.1), 0 10px 10px -5px rgba(30, 64, 175, 0.04);
+    border-color: var(--secondary-blue);
+}
+
+/* 推荐标签样式 */
+.recommended-badge {
+    background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Button animations - 商务风格 */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.3);
+}
+
+/* 导航栏商务风格 */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+/* 特色服务卡片 */
+.feature-card {
+    transition: all 0.3s ease;
+    padding: 2rem;
+    border-radius: 0.75rem;
+}
+
+.feature-card:hover {
+    background: var(--gray-50);
+    transform: translateY(-2px);
+}
+
+/* 用户评价卡片 */
+.testimonial-card {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    background: white;
+    border-color: var(--light-blue);
+    box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.1);
+}
+
+/* FAQ 样式 */
+.faq-item {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--light-blue);
+    box-shadow: 0 2px 4px -1px rgba(30, 64, 175, 0.1);
+}
+
+/* CTA section 商务风格 */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    position: relative;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>') repeat;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .section-padding {
+        padding: 3rem 0;
+    }
+    
+    .pricing-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Loading animation */
+.loading {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scroll indicator - 商务蓝色 */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-blue), var(--accent-blue));
+    transform-origin: left;
+    transform: scaleX(0);
+    z-index: 9999;
+}
+
+/* Custom focus styles for accessibility */
+.focus\:ring-custom:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* 价格标签特殊样式 */
+.price-tag {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 套餐详情列表样式 */
+.package-details {
+    background: var(--gray-50);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.package-details h4 {
+    color: var(--gray-800);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.package-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.package-details li {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    .pricing-card {
+        break-inside: avoid;
+    }
+}
+
+/* 商务专业风格的阴影效果 */
+.business-shadow {
+    box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.1), 0 2px 4px -1px rgba(30, 64, 175, 0.06);
+}
+
+.business-shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.1), 0 4px 6px -2px rgba(30, 64, 175, 0.05);
+}
+
+/* 渐变文字效果 */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
